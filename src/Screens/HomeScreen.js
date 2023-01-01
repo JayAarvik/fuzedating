@@ -10,7 +10,7 @@ export default function HomeScreen({navigation}) {
   }
 
   return (
-    <View style={{backgroundColor:CBG}}>
+    <View style={{backgroundColor:CBG, flex:1}}>
         <ImageBackground source={BGI} resizeMode="cover" style={styles.bgImage}>
           <Txt c="w" pos="ab" bt={5} rt={10} lft={20} s={15} w="600"> 
             Fuze is a dating app for humans who are looking for dates and finding someone new. 

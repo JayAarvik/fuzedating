@@ -16,10 +16,10 @@ function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;   
   }
 
-export default function TogetherScreen({navigation}) {
+export default function SeeConnScreen({navigation}) {
 
   const submit = () => {
-    navigation.navigate("PermissionScreen");
+    navigation.navigate("SafeScreen");
   }
   const goToBack = () => {
     navigation.goBack();
@@ -29,41 +29,39 @@ export default function TogetherScreen({navigation}) {
   }
   return (
     <View style={{backgroundColor:CBG, flex:1}}>
-      <View style={{flexDirection:"row", alignItems:"center"}}>
+      {/* <View style={{flexDirection:"row", alignItems:"center"}}>
         <Header onPress={() => goToBack()} mr={10} bg="#fff" />
-        <Txt c="g"><Txt>8</Txt> of 10</Txt>
-      </View>
-      
-      <View>
+        <Txt c="g"><Txt>10</Txt> of 10</Txt>
+      </View> */}
+      <ImageBackground source={GirlImage} style={styles.bgImage}>
+         <Header onPress={() => goToBack()} mr={10} bg="transparent" />
+      </ImageBackground>
+      {/* <View>
             <Image source={GirlImage} style={styles.bgImage} />
-      </View>
+      </View> */}
       
       <View style={{}}>
-        <Txt s={22} w="300" mt={30} a="c" pt={5} pb={5} mb={5}>
-          Exploring together?
+        <Txt s={22} w="300" mt={30} a="c" pt={5} pb={5} mb={5} lh={30}>
+          This is where you will see your Connections
         </Txt>
         <View style={styles.borderLine}></View>
         <Txt c="g" a="c">
-          Pair your account with a partner.
+            As soon as someone likes you back, you will see
         </Txt>
         <Txt c="g" a="c">
-          No connections or chat histories will be shared.
+        them here. Keep liking more humans, a
+        </Txt>
+        <Txt c="g" a="c">
+        Connection could be just around the corner.
         </Txt>
       </View>
       
     <View style={styles.nextButton}>
-    <Tcho bg="#000" ht={48} wd={311} br={44} cntr="cntr" mt={10}
+    <Tcho bg="#f1f1f1" ht={48} wd={311} br={44} cntr="cntr" mt={10}
               onPress={() => submit()}
         >
-          <Txt c="w">
-            Invite Partner
-          </Txt>
-        </Tcho>
-        <Tcho bg="#f3f3f3" ht={48} wd={311} br={44} cntr="cntr" mt={10}
-              onPress={() => submit()}
-        >
-          <Txt c="b">
-            Skip
+          <Txt c="b" w="500">
+            Show me more humans
           </Txt>
         </Tcho>
     </View>
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
           height:350,
           width:"100%",
           alignSelf:"center",
-          marginTop:15
+        //   marginTop:15
         },
         radioGrp:{
             flexDirection:"row",

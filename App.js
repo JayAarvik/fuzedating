@@ -11,6 +11,13 @@ import LookingForScreen from './src/Screens/LookingForScreen';
 import DesireScreen from './src/Screens/DesireScreen';
 import AddPhotoScreen from './src/Screens/AddPhotoScreen';
 import TogetherScreen from './src/Screens/TogetherScreen';
+import PermissionScreen from './src/Screens/PermissionScreen';
+import ImproveScreen from './src/Screens/ImproveScreen';
+import EditProfileScreen from './src/Screens/EditProfileScreen';
+import ProfileScreen from './src/Screens/ProfileScreen';
+import SettingsScreen from './src/Screens/SettingScreen';
+import SeeConnScreen from './src/Screens/SeeConnScreen';
+import SafeScreen from './src/Screens/SafeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +35,13 @@ const MyStack = () => {
         <Stack.Screen name="DesireScreen" component={DesireScreen} options={{headerShown: false}} />
         <Stack.Screen name="AddPhotoScreen" component={AddPhotoScreen} options={{headerShown: false}} />
         <Stack.Screen name="TogetherScreen" component={TogetherScreen} options={{headerShown: false}} />
+        <Stack.Screen name="PermissionScreen" component={PermissionScreen} options={{headerShown: false}} />
+        <Stack.Screen name="ImproveScreen" component={ImproveScreen} options={{headerShown: false}} />
+        <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} options={{headerShown: false}} />
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} options={{headerShown: false}} />
+        <Stack.Screen name="SettingsScreen" component={SettingsScreen} options={{headerShown: false}} />
+        <Stack.Screen name="SeeConnScreen" component={SeeConnScreen} options={{headerShown: false}} />
+        <Stack.Screen name="SafeScreen" component={SafeScreen} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

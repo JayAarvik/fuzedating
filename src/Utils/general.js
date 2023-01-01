@@ -136,6 +136,7 @@ export const Txt = p => {
     <Text
       numberOfLines={p.lines ? p.lines : null}
       ellipsizeMode={p.ellipsizeMode ? p.ellipsizeMode : null}
+      onPress={p.onPress}
       style={{
         fontFamily: p.w ? get_font(p.w) : 'Poppins-Regular',
         fontSize: p.s ? p.s : 14,

@@ -16,10 +16,10 @@ function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;   
   }
 
-export default function TogetherScreen({navigation}) {
+export default function ImproveScreen({navigation}) {
 
   const submit = () => {
-    navigation.navigate("PermissionScreen");
+    navigation.navigate("EditProfileScreen");
   }
   const goToBack = () => {
     navigation.goBack();
@@ -31,7 +31,7 @@ export default function TogetherScreen({navigation}) {
     <View style={{backgroundColor:CBG, flex:1}}>
       <View style={{flexDirection:"row", alignItems:"center"}}>
         <Header onPress={() => goToBack()} mr={10} bg="#fff" />
-        <Txt c="g"><Txt>8</Txt> of 10</Txt>
+        <Txt c="g"><Txt>10</Txt> of 10</Txt>
       </View>
       
       <View>
@@ -40,14 +40,17 @@ export default function TogetherScreen({navigation}) {
       
       <View style={{}}>
         <Txt s={22} w="300" mt={30} a="c" pt={5} pb={5} mb={5}>
-          Exploring together?
+          Help us improve Feeld
         </Txt>
         <View style={styles.borderLine}></View>
         <Txt c="g" a="c">
-          Pair your account with a partner.
+          We use external services to track how Feeld is
         </Txt>
         <Txt c="g" a="c">
-          No connections or chat histories will be shared.
+        performing for you. We don't sell your data 
+        </Txt>
+        <Txt c="g" a="c">
+        for advertising purposes.
         </Txt>
       </View>
       
@@ -56,14 +59,7 @@ export default function TogetherScreen({navigation}) {
               onPress={() => submit()}
         >
           <Txt c="w">
-            Invite Partner
-          </Txt>
-        </Tcho>
-        <Tcho bg="#f3f3f3" ht={48} wd={311} br={44} cntr="cntr" mt={10}
-              onPress={() => submit()}
-        >
-          <Txt c="b">
-            Skip
+            Continue
           </Txt>
         </Tcho>
     </View>
