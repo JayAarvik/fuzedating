@@ -16,10 +16,10 @@ function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;   
   }
 
-export default function SafeScreen({navigation}) {
+export default function YouAreScreen({navigation}) {
 
   const submit = () => {
-    navigation.navigate("ShareScreen");
+    navigation.navigate("FullProfileScreen");
   }
   const goToBack = () => {
     navigation.goBack();
@@ -42,17 +42,20 @@ export default function SafeScreen({navigation}) {
       
       <View style={{}}>
         <Txt s={22} w="300" mt={30} a="c" pt={5} pb={5} mb={5} lh={30}>
-          Safe and secure
+          Show who you are
         </Txt>
         <View style={styles.borderLine}></View>
         <Txt c="g" a="c">
-           For enhanced control on who can see your
+           The most successfull profiles are an authentic
         </Txt>
         <Txt c="g" a="c">
-           profile and photos, you can use Incognito Mode
+           reflection of their authors. For the best
         </Txt>
         <Txt c="g" a="c">
-           and Private Photos.
+           experience on Feeld, please choose a clear and
+        </Txt>
+        <Txt c="g" a="c">
+           recent photo.
         </Txt>
       </View>
       

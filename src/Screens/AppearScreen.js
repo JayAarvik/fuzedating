@@ -16,10 +16,10 @@ function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;   
   }
 
-export default function SafeScreen({navigation}) {
+export default function AppearScreen({navigation}) {
 
   const submit = () => {
-    navigation.navigate("ShareScreen");
+    navigation.navigate("YouAreScreen");
   }
   const goToBack = () => {
     navigation.goBack();
@@ -42,33 +42,23 @@ export default function SafeScreen({navigation}) {
       
       <View style={{}}>
         <Txt s={22} w="300" mt={30} a="c" pt={5} pb={5} mb={5} lh={30}>
-          Safe and secure
+          Humans who liked you will{'\n'} appear here
         </Txt>
         <View style={styles.borderLine}></View>
         <Txt c="g" a="c">
-           For enhanced control on who can see your
+            Feeld is a community-minded space. It can take
         </Txt>
         <Txt c="g" a="c">
-           profile and photos, you can use Incognito Mode
-        </Txt>
-        <Txt c="g" a="c">
-           and Private Photos.
+            a while for your humans to find you but they will.
         </Txt>
       </View>
       
     <View style={styles.nextButton}>
-    <Tcho bg="#f1f1f1" ht={48} wd={200} br={44} cntr="cntr" mt={10}
+    <Tcho bg="#f1f1f1" ht={48} wd={311} br={44} cntr="cntr" mt={10}
               onPress={() => submit()}
         >
           <Txt c="b" w="500">
-            Learn more
-          </Txt>
-        </Tcho>
-    <Tcho bg="#000" ht={48} wd={150} br={44} cntr="cntr" mt={10}
-              onPress={() => submit()}
-        >
-          <Txt c="w" w="500">
-            Next
+            Edit search settings
           </Txt>
         </Tcho>
     </View>
@@ -96,15 +86,13 @@ const styles = StyleSheet.create({
         nextButton:{
             position:"absolute",
             bottom:20,
-            alignSelf:"center",
-            flexDirection:"row",
-            alignItems:"center",
-            justifyContent:"space-around"
+            alignSelf:"center"
         },
         borderLine:{
-          borderWidth:0.5,
+          borderWidth:0.7,
           width:"80%",
           alignSelf:"center",
-          marginBottom:20
+          marginBottom:20,
+          borderColor:"gray"
         }
 })

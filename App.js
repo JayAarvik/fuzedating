@@ -18,6 +18,10 @@ import ProfileScreen from './src/Screens/ProfileScreen';
 import SettingsScreen from './src/Screens/SettingScreen';
 import SeeConnScreen from './src/Screens/SeeConnScreen';
 import SafeScreen from './src/Screens/SafeScreen';
+import ShareScreen from './src/Screens/ShareScreen';
+import AppearScreen from './src/Screens/AppearScreen';
+import YouAreScreen from './src/Screens/YouAreScreen';
+import FullProfileScreen from './src/Screens/FullProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +46,10 @@ const MyStack = () => {
         <Stack.Screen name="SettingsScreen" component={SettingsScreen} options={{headerShown: false}} />
         <Stack.Screen name="SeeConnScreen" component={SeeConnScreen} options={{headerShown: false}} />
         <Stack.Screen name="SafeScreen" component={SafeScreen} options={{headerShown: false}} />
+        <Stack.Screen name="ShareScreen" component={ShareScreen} options={{headerShown: false}} />
+        <Stack.Screen name="AppearScreen" component={AppearScreen} options={{headerShown: false}} />
+        <Stack.Screen name="YouAreScreen" component={YouAreScreen} options={{headerShown: false}} />
+        <Stack.Screen name="FullProfileScreen" component={FullProfileScreen} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
